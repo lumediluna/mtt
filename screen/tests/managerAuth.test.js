@@ -32,7 +32,7 @@ test('Экран авторизации под менеджером: главн�
 });
 
 test('Экран авторизации под менеджером: hover ссылки "Восстановление пароля"', async ({ page }) => {
-  await page.goto('https://manager.itoolabs-stage2.exolve.ru/#/', {
+  await page.goto((managerAuth), {
     waitUntil: 'networkidle',
   });
 
