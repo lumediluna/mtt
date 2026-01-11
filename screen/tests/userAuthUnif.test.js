@@ -1,11 +1,10 @@
 import { test, expect } from '@playwright/test';
-
-const userAuth = 'https://exolve752439.itoolabs-stage2.exolve.ru/';// указать нужный адрес домена
+import { userAuthUnif } from '../../config/envConfig';
 
 
 
 test('Экран авторизации под сотрудниковм ВАТС: главная + hover кнопки "Войти"', async ({ page }) => {
-  await page.goto((userAuth), {
+  await page.goto((userAuthUnif), {
     waitUntil: 'networkidle',
   });
 
@@ -32,7 +31,7 @@ test('Экран авторизации под сотрудниковм ВАТС
 });
 
 test('Экран авторизации под сотрудниковм ВАТС: hover ссылки "Восстановление пароля"', async ({ page }) => {
-  await page.goto((userAuth), {
+  await page.goto((userAuthUnif), {
     waitUntil: 'networkidle',
   });
 
@@ -61,7 +60,7 @@ test('Экран авторизации под сотрудниковм ВАТС
 
 
 test('Экран авторизации под сотрудниковм ВАТС: hover ссылки "Зарегистрироваться"', async ({ page }) => {
-  await page.goto((userAuth), {
+  await page.goto((userAuthUnif), {
     waitUntil: 'networkidle',
   });
 

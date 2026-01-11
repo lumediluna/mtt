@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test';
-
-const managerAuth = 'https://manager.itoolabs-stage2.exolve.ru';
+import { managerAuth } from '../../config/envConfig';
 
 
 
