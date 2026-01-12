@@ -9,9 +9,7 @@ test('Экран авторизации под сотрудниковм ВАТС
   });
 
   const loginButton = page.getByRole('button', { name: 'Войти', exact: true });
-
   await expect(loginButton).toBeVisible();
-
   const loginBox = await loginButton.boundingBox();
   if (loginBox) {
     await expect(page).toHaveScreenshot('user-login-static.png', {
@@ -37,9 +35,7 @@ test('Экран авторизации под сотрудниковм ВАТС
 
   // Это span.link-text с текстом "Восстановление пароля"
   const restoreLinkText = page.getByText('Восстановление пароля', { exact: true });
-
   await expect(restoreLinkText).toBeVisible();
-
   const box = await restoreLinkText.boundingBox();
   if (box) {
     // статичное состояние
@@ -50,7 +46,6 @@ test('Экран авторизации под сотрудниковм ВАТС
 
     // наведение мыши по координатам этого текста
     await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
-
     await expect(page).toHaveScreenshot('user-restore-hover.png', {
       fullPage: false,
       clip: box,
@@ -66,9 +61,7 @@ test('Экран авторизации под сотрудниковм ВАТС
 
   // Это span.link-text с текстом "Восстановление пароля"
   const restoreLinkText = page.getByText('Зарегистрироваться', { exact: true });
-
   await expect(restoreLinkText).toBeVisible();
-
   const box = await restoreLinkText.boundingBox();
   if (box) {
     // статичное состояние
@@ -79,7 +72,6 @@ test('Экран авторизации под сотрудниковм ВАТС
 
     // наведение мыши по координатам этого текста
     await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
-
     await expect(page).toHaveScreenshot('user-register-hover.png', {
       fullPage: false,
       clip: box,

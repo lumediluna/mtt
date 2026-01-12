@@ -11,9 +11,9 @@ export const DEFAULT_EXPECT_TIMEOUT = 15_000; // мс
 
 // ======= АВТОРИЗАЦИЯ MANAGER =======
 
-// URL страницы авторизации (если меняется роут, правим только здесь)
-export const MANAGER_AUTH_PATH = '/#/';
-export const MANAGER_AUTH_URL = `${managerAuth}${MANAGER_AUTH_PATH}`;
+// // URL страницы авторизации (если меняется роут, правим только здесь)
+// export const MANAGER_AUTH_PATH = '/#/';
+// export const MANAGER_AUTH_URL = `${managerAuth}${MANAGER_AUTH_PATH}`;
 
 
 // // Тексты/названия элементов
