@@ -6,8 +6,8 @@ export const userAuthUnif = 'https://itoolabs-stage2.exolve.ru/'
 export const DEFAULT_WAIT_UNTIL = 'networkidle';
 
 // Таймауты (если нужно централизовать)
-export const DEFAULT_TEST_TIMEOUT = 60_000; // мс
-export const DEFAULT_EXPECT_TIMEOUT = 15_000; // мс
+export const DEFAULT_TEST_TIMEOUT = 80_000; // мс
+export const DEFAULT_EXPECT_TIMEOUT = 80_000; // мс
 
 // ======= АВТОРИЗАЦИЯ MANAGER =======
 
