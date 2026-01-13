@@ -1,8 +1,9 @@
 
 // ======= ОБЩИЕ НАСТРОЙКИ =======
 export const managerAuth = 'https://manager.itoolabs-stage2.exolve.ru/'; //указать нужный стенд
-export const userAuth = 'https://exolve752439.itoolabs-stage2.exolve.ru/'; // указать нужный адрес конечного домена
-export const userAuthUnif = 'https://itoolabs-stage2.exolve.ru/'
+export const userAuthSpec = 'https://exolve752439.itoolabs-stage2.exolve.ru/'; // указать нужный адрес конечного домена
+export const userAuthUnif = 'https://itoolabs-stage2.exolve.ru/';
+export const wizard = 'https://wizardvue.itoolabs-stage2.exolve.ru/';
 export const DEFAULT_WAIT_UNTIL = 'networkidle';
 export const viewportDesktop = {
   width: 1280,
