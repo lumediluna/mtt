@@ -11,7 +11,18 @@ test.describe("[wizard] Экран саморегистрации ВАТС", () 
     await test.step("Проверяем видимость кнопки 'Продолжить'", async () => {
       const continueButton = page.getByRole("button", { name: "Продолжить", exact: true });
       await expect(continueButton).toBeVisible();
-    });
+      });
+
+   await test.step("Заполняем поле ФИО валидными данными", async () => {
+      const fioInput = page.getByPlaceholder("Иванов Иван Иванович");
+      await fioInput.fill("Тестовый Пользователь");
+      });
+    
+    await test.step("Заполняем поле телефон валидными данными", async () => {
+      const telnumInput = page.getByPlaceholder(/^7.*200-50-60$/);
+      await telnumInput.fill("+7 (999) 200-50-60");
+      });
+ 
 
     await test.step("Делаем скриншот всей страницы (статичное состояние)", async () => {
       await expect(page).toHaveScreenshot("wizard-page-static.png", {
@@ -34,15 +45,6 @@ test.describe("[wizard] Экран саморегистрации ВАТС", () 
       });
     });
 
-    await test.step("Заполняем поле ФИО валидными данными", async () => {
-      const fioInput = page.getByPlaceholder("Иванов Иван Иванович");
-      await fioInput.fill("Тестовый Пользователь");
-      });
-    
-    await test.step("Заполняем поле телефон валидными данными", async () => {
-      const telnumInput = page.getByPlaceholder(/^7.*200-50-60$/);
-      await telnumInput.fill("+7 (999) 200-50-60");
-      });
       
 //    await test.step("Прожимаем чек-бокс ознакомление", async () => { 
 //       await page.getByText("Ознакомлен с Политикой обработки персональных данных", { exact: false }).click();
