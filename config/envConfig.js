@@ -4,6 +4,11 @@ export const managerAuth = 'https://manager.itoolabs-stage2.exolve.ru/'; //ук�
 export const userAuth = 'https://exolve752439.itoolabs-stage2.exolve.ru/'; // указать нужный адрес конечного домена
 export const userAuthUnif = 'https://itoolabs-stage2.exolve.ru/'
 export const DEFAULT_WAIT_UNTIL = 'networkidle';
+export const userAuth = process.env.USER_AUTH as string;
+export const viewportDesktop = {
+  width: 1280,
+  height: 800,
+};
 
 // Таймауты (если нужно централизовать)
 export const DEFAULT_TEST_TIMEOUT = 80_000; // мс

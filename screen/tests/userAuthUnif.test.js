@@ -1,11 +1,11 @@
 import { test, expect } from "@playwright/test";
-import { userAuthUnif } from "../../config/envConfig";
+import { userAuthUnif, viewportDesktop } from "../../config/envConfig";
 
 test.describe("[userAuthUnif] Экран авторизации сотрудника ВАТС (унифицированный)", () => {
   test(" Главная страница + hover кнопки 'Войти'", async ({ page }) => {
     await test.step("Открываем страницу авторизации сотрудника ВАТС (унифицированный вход)", async () => {
       await page.goto(userAuthUnif, { waitUntil: "networkidle" });
-      await page.setViewportSize({ width: 1280, height: 800 });
+      await page.setViewportSize({ viewportDesktop });
     });
 
     await test.step("Проверяем видимость кнопки 'Войти'", async () => {

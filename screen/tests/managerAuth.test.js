@@ -1,11 +1,11 @@
 import { test, expect } from "@playwright/test";
-import { userAuth } from "../../config/envConfig";
+import { userAuth, viewportDesktop } from "../../config/envConfig";
 
 test.describe("[userAuth] Экран авторизации сотрудника ВАТС", () => {
   test("Главная страница + hover кнопки 'Войти'", async ({ page }) => {
     await test.step("Открываем страницу авторизации сотрудника ВАТС", async () => {
       await page.goto(userAuth, { waitUntil: "networkidle" });
-      await page.setViewportSize({ width: 1280, height: 800 });
+      await page.setViewportSize({ viewportDesktop });
     });
 
     await test.step("Проверяем видимость кнопки 'Войти'", async () => {
