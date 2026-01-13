@@ -5,7 +5,7 @@ test.describe("[userAuthUnif] Экран авторизации сотрудни
   test(" Главная страница + hover кнопки 'Войти'", async ({ page }) => {
     await test.step("Открываем страницу авторизации сотрудника ВАТС (унифицированный вход)", async () => {
       await page.goto(userAuthUnif, { waitUntil: "networkidle" });
-      await page.setViewportSize({ viewportDesktop });
+      await page.setViewportSize( viewportDesktop );
     });
 
     await test.step("Проверяем видимость кнопки 'Войти'", async () => {
